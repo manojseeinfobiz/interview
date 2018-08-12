@@ -45,10 +45,10 @@ public class BerlinClockTest {
     public void testMidnight1() {
     	TimeConverter clock = new BerlinClock();    	
 
-        String expected = "Y\r\n" +
-                "OOOO\r\n" +
-                "OOOO\r\n" +
-                "OOOOOOOOOOO\r\n" +
+        String expected = "Y\n" +
+                "OOOO\n" +
+                "OOOO\n" +
+                "OOOOOOOOOOO\n" +
                 "OOOO";
 
         assertEquals(expected, clock.convertTime("00:00:00"));
@@ -58,10 +58,10 @@ public class BerlinClockTest {
     public void testMiddleOfTheAfternoon() {
     	TimeConverter clock = new BerlinClock();    	
 
-        String expected = "O\r\n" +
-                "RROO\r\n" +
-                "RRRO\r\n" +
-                "YYROOOOOOOO\r\n" +
+        String expected = "O\n" +
+                "RROO\n" +
+                "RRRO\n" +
+                "YYROOOOOOOO\n" +
                 "YYOO";
 
         assertEquals(expected, clock.convertTime("13:17:01"));
@@ -71,10 +71,10 @@ public class BerlinClockTest {
     public void testJustBeforeMidnight() {
     	TimeConverter clock = new BerlinClock();    	
 
-        String expected = "O\r\n" +
-                "RRRR\r\n" +
-                "RRRO\r\n" +
-                "YYRYYRYYRYY\r\n" +
+        String expected = "O\n" +
+                "RRRR\n" +
+                "RRRO\n" +
+                "YYRYYRYYRYY\n" +
                 "YYYY";
 
         assertEquals(expected, clock.convertTime("23:59:59"));
@@ -84,10 +84,10 @@ public class BerlinClockTest {
     public void testMidnight2() {
     	TimeConverter clock = new BerlinClock();    	
 
-        String expected = "Y\r\n" +
-                "RRRR\r\n" +
-                "RRRR\r\n" +
-                "OOOOOOOOOOO\r\n" +
+        String expected = "Y\n" +
+                "RRRR\n" +
+                "RRRR\n" +
+                "OOOOOOOOOOO\n" +
                 "OOOO";
 
         assertEquals(expected, clock.convertTime("24:00:00"));

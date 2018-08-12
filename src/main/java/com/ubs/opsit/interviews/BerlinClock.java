@@ -59,7 +59,7 @@ public class BerlinClock implements TimeConverter {
 		String line4 = rowString(minutes / 5, 11, "Y").replaceAll("YYY", "YYR");
 		String line5 = rowString(minutes % 5, 4, "Y");
 
-		return String.join(NEW_LINE, Arrays.asList(line1, line2, line3, line4, line5));
+		return String.join(NEW_LINE, Arrays.asList(line1, line2, line3, line4, line5)).replace("\r", "");
 
 	}
 
